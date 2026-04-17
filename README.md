@@ -1,38 +1,35 @@
-# CNC Spindle Digital Twin
+# CNC Digital Twin — Learning Version
 
-A real-time digital twin simulation of a CNC machine spindle, built in Python.
-Monitors spindle health live and detects anomalies using threshold-based logic.
-
-![Dashboard Screenshot](screenshot.png)
+An earlier, simpler CNC process monitoring simulator built in Python.
+This was my first digital twin project — focused on understanding
+the core concepts before building the more advanced live version.
 
 ## What it does
 
-- Simulates a CNC spindle streaming live sensor data (RPM, temperature, vibration, load)
-- A DigitalTwin class receives data and tracks machine state in real time
-- Detects anomalies and classifies severity as WARNING or CRITICAL
-- Live matplotlib dashboard updates every 500ms with 4 sensor charts
-- Tracks tool wear % and predicts remaining tool life
+- Simulates 120 seconds of CNC machining data
+- Monitors temperature, vibration, and tool wear
+- Detects and logs alerts when values exceed safe limits
+- Saves sensor data to CSV
+- Generates a static 3-chart process monitoring plot
 
 ## Tech stack
 
 - Python 3.x
-- NumPy: sensor data simulation with realistic noise
-- Matplotlib: live animating dashboard
+- NumPy — signal simulation with noise
+- Pandas — data logging to CSV
+- Matplotlib — static process chart
 
 ## How to run
 
-```bash
 pip install -r requirements.txt
-python spindle_twin.py
-```
+python Simulator.py
 
-## What I learned
+## How this differs from v2
 
-Built during a 70-minute train journey as a self-directed project.
-Covers core digital twin concepts: sensor simulation, state machines,
-anomaly detection, and real-time data visualization the same architecture
-used in industrial platforms like Siemens MindSphere and Azure Digital Twins.
+This is the foundation. The upgraded version (cnc-spindle-digital-twin)
+adds a live updating dashboard, real-time anomaly detection, a DigitalTwin
+class with state machine, and tool wear tracking — built after mastering
+these basics.
 
 ## Author
-Amalkrishna, Intelligent Manufacturing student interested in Industry 4.0,
-digital manufacturing, and CAM simulation.
+Amalkrishna — Intelligent Manufacturing student
